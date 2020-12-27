@@ -1,7 +1,6 @@
 {
-  "name": "TextToSpeech",
+  "name": "texttospeech",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server",
@@ -15,5 +14,15 @@
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "gtts": "^0.2.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kramdroidtech/TextToSpeech.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kramdroidtech/TextToSpeech/issues"
+  },
+  "homepage": "https://github.com/Kramdroidtech/TextToSpeech#readme",
+  "description": ""
 }

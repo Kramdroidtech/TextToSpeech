@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, inital-scale=1">
-  <title>TEXT TO SPEECH</title>
-</head>
-<body>
-
-  <div class="main">
-    <form method="GET" action="/convertText">
-      <textarea name="textInput"></textarea>
-      <input type="submit" value="CONVERT">
-    </form>
-  </div>
-
-</body>
+  <head>
+    <%- include('./partial/linkAndMeta.ejs') %>
+    <title>TEXT TO SPEECH</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="textTo-speech-main">
+        <h1 class="pageTitle">TEXT TO SPEECH</h1>
+        <form method="GET" action="/convertText">
+          <textarea name="textInput"></textarea>
+          <select name="languageText">
+            <% for(i in languages.languageName){ %>
+            <option value="<%= languages.languageCode[i] %>">
+              <%= languages.languageName[i] %>
+            </option>
+            <% } %>
+          </select>
+          <input type="submit" value="DOWNLOAD" />
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
